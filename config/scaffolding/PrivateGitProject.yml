@@ -24,6 +24,10 @@ services:
   packages:
   - name: PrivateGitProject
     version: "1.0"
+- serviceName: project.privategit.integrations:daf3
+  packages:
+  - name: PrivateGitProject
+    version: "1.0"
 configurationVariables:
   jdbcfunc.SAPTxStore.failFastMode: false
   jdbcfunc.SAPTxStore.connPoolAlias: SAP TxStore Pool
