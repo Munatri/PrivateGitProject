@@ -7,6 +7,19 @@ packages:
   gitUrl: https://github.com/Munatri
   gitUsername: Munatri
   gitBranch: main
+services:
+- serviceName: project.privategit.integrations:daf
+  packages:
+  - name: PrivateGitProject
+    version: "1.0"
+- serviceName: pub.math:addInts
+  packages:
+  - name: WmPublic
+    version: 12.1.0.0.1072
+- serviceName: pub.flow:debugLog
+  packages:
+  - name: WmPublic
+    version: 12.1.0.0.1072
 configurationVariables:
   jdbcfunc.SAPTxStore.failFastMode: false
   jdbcfunc.SAPTxStore.connPoolAlias: SAP TxStore Pool
