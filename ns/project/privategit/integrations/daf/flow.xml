@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="3.2" CLEANUP="false">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<SEQUENCE NAME="IF" EXIT-ON="FAILURE" CONDITION="((%/a%==%/b%))" FORM="IF">
+
+  <!-- nodes -->
+
+<INVOKE NAME="Math" SERVICE="pub.math:addInts">
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/a;1;0" TO="/num1;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/b;1;0" TO="/num2;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <COMMENT></COMMENT>
+</MAP>
+</INVOKE>
+</SEQUENCE>
+
+<SEQUENCE NAME="ELSE" EXIT-ON="FAILURE" CONDITION="" FORM="ELSE">
+
+  <!-- nodes -->
+
+<INVOKE NAME="Flow" SERVICE="pub.flow:debugLog">
+</INVOKE>
+</SEQUENCE>
+</FLOW>
